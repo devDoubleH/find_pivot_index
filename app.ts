@@ -11,9 +11,7 @@ const find_pivot = (arr: number[], length: number): number => {
   for (let i = 0; i < length; i++) {
     if (sum(arr.slice(0, i)) === sum(arr.slice(i + 1, length))) {
       pivot = i;
-    } else {
-      pivot = -1;
     }
   }
-  return pivot;
+  return pivot === 0 ? -1 : pivot;
 };
